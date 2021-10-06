@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="eval" method="POST">
+        {% csrf_token %}
+       Enter first number: <input type="text" name="num1"><br><br>
+        Enter symbol/operator:<input type="text" name="sym"><br><br>
+        Enter second number:<input type="text" name="num2"><br><br>  
+                <button type="submit">ans</button>
+    </form>
+    <br><br>
+    Answer:{{result}}
+
+
+
+    <h3> Note :- Used (*,+,-,/) this operators only</h3>
+</body>
+</html>
